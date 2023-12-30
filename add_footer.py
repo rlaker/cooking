@@ -5,15 +5,15 @@ def insert_footer(file_path, footer_content):
     with open(file_path, 'r') as file:
         content = file.read()
 
-    # Check if the footer is already present
-    if footer_content.strip() in content:
-        print(f"Footer already present in {file_path}")
-        return
+    # # Check if the footer is already present
+    # if footer_content.strip() in content:
+    #     print(f"Footer already present in {file_path}")
+    #     return
 
     # Split the content at '</body>' and insert the footer
     parts = content.split('</body>')
     if len(parts) == 2:
-        updated_content = parts[0] + '</body>' + footer_content + '</html>'
+        updated_content = parts[0] + footer_content + '</body></html>'
         # print(updated_content)
         with open(file_path, 'w') as file:
             file.write(updated_content)
