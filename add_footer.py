@@ -33,7 +33,7 @@ def find_and_update_html_files(root_folder, footer_content):
 footer_content = """
 <!-- Footer -->
 <footer>
-    <script async data-id="101072216" src="//static.getclicky.com/js"></script
+    <script async data-id="101072216" src="//static.getclicky.com/js"></script>
 </footer>
 """
 
