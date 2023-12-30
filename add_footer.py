@@ -14,6 +14,7 @@ def insert_footer(file_path, footer_content):
     parts = content.split('</body>')
     if len(parts) == 2:
         updated_content = parts[0] + '</body>' + footer_content + '</html>'
+        # print(updated_content)
         with open(file_path, 'w') as file:
             file.write(updated_content)
             print(f"Footer added to {file_path}")
@@ -34,7 +35,6 @@ footer_content = """
 <footer>
     <script async data-id="101072216" src="//static.getclicky.com/js"></script
 </footer>
-</body></html>
 """
 
 # Specify the root folder where your HTML files are located
